@@ -14,7 +14,7 @@ Follow the instructions line-by-line.
 
 Write the command that you used to do this below:
 ----------
-
+cd ~
 
 
 ==========
@@ -22,15 +22,15 @@ Write the command that you used to do this below:
 
 Write the command that you used to do this - as well as its output - below :
 ----------
-
-
+pwd
+/Users/brandanramnandan
 
 ==========
 1c. Create a new directory inside your home directory named after this class. Call it "mtec1003-lab-02".
 
 Write the command that you used to do this:
 ----------
-
+mkdir mtec1004-lab-02
 
 
 ==========
@@ -40,7 +40,7 @@ Write the command that you used to do this:
 
 What command did you use?
 ----------
-
+cd ~/Desktop/myClasses/mtec1004/lab-02
 
 
 ==========
@@ -49,7 +49,8 @@ Then, change into your new directory.
 
 What two commands did you use?
 ----------
-
+mkdir my_files
+cd my_files
 
 
 
@@ -61,7 +62,8 @@ $ ls
 
 Copy and paste the output below.
 ----------
-
+foo.txt
+brandanramnandan@Brandans-Air my_files % 
 
 
 
@@ -70,7 +72,7 @@ Copy and paste the output below.
 
 What command did you use?
 ----------
-
+touch bar.txt
 
 
 
@@ -81,9 +83,15 @@ What command did you use?
 Write the commands that you used.
 Also, copy and paste the output of your file listing below.
 ----------
+cp bar .txt
+bax.txt
+ls -l
 
-
-
+total 0
+-rw-r--r--  1 brandanramnandan  staff  0 Sep 24 10:00 bar.txt
+-rw-r--r--  1 brandanramnandan  staff  0 Sep 24 10:01 baz.txt
+-rw-r--r--  1 brandanramnandan  staff  0 Sep 24 10:00 foo.txt
+brandanramnandan@Brandans-Air my_files % 
 
 
 
@@ -95,9 +103,10 @@ Also, copy and paste the output of your file listing below.
 Write the command that you used to remove the file.
 Copy and paste the output of your file listing below.
 ----------
-
-
-
+rm bar.txt
+ls
+baz.txt	foo.txt
+brandanramnandan@Brandans-Air my_files % 
 
 
 
@@ -110,9 +119,9 @@ Copy and paste the output of your file listing below.
 Write the command that you used to move the file.
 Copy and paste the output of your file listing below.
 ----------
-
-
-
+mv foo.txt qux.txt
+ls
+baz.txt	qux.txt
 
 
 
@@ -121,7 +130,7 @@ Copy and paste the output of your file listing below.
 ==========
 8. Go up one directory so that you're back in ~/mtec1003-lab-02. What command did you use?
 ----------
-
+cd
 
 
 ==========
@@ -129,7 +138,8 @@ Copy and paste the output of your file listing below.
 
 Write out the command that you used and what happened.
 ----------
-
+rmdir my_files/
+rmdir: my_files/: Directory not empty
 
 
 
@@ -141,8 +151,8 @@ Write out the command that you used and what happened.
 
 Write out the command that you used and what happened.
 ----------
-
-
+rm my_files/
+rm: my_files/: is a directory
 
 
 
@@ -172,7 +182,8 @@ Use the command called cat on the file to show its contents.
 
 Describe what happened below.
 ----------
-
+books/other/pg1232.txt
+showed the entire contents of the text file, the whole book, Machiavelli's "The Prince."
 
 
 
@@ -187,8 +198,8 @@ Use the command, head, on the file to show the contents of the beginning of the 
 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
-
-
+head books/other/pg1232.txt
+Title: The Prince
 
 
 
@@ -202,10 +213,9 @@ Use tail on the file to show the contents of the end of the file.
 
 Write the command that you used below.  Write the last line of the output below.
 ----------
+tail books/other/ph1232.txt
 
-
-
-
+subscribe to our email newsletter to hear about new eBooks.
 
 
 
@@ -218,39 +228,38 @@ Use less and more on the file to show the contents of the file.  Try pressing sp
 
 Write the command that you used below.  Describe what spacebar and q does after using either less or more.
 ----------
+less books/other/pg1232.txt
+more books/other/pg1232.txt
 
-
-
-
-
-
+q - quit
+spacebar + show the next lines in the text window
 
 ==========
 16. Describe what situations you would use the following commands for viewing files: less, more, cat, tail, head
 
 (Some characteristics that may help your description might be the length of the file, whether or not you'd like to read the whole thing... or just the beginning or end, etc.)
 ----------
-
-
-
+Use less/more if the length of the file is significantly longer than can be easily navigated in the bash window.
+Use head if you just need to see the contents of the opening of the file
+Use tail if you just need to see contents of the closing of the file.
 
 
 
 ==========
 17.  How many words are in pg1232.txt?  What command did you use to determine the word count?
 ----------
+52639
 
-
-
+wc -w books/other/pg1232.txt
 
 
 
 ==========
 18.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
 ----------
+5063
 
-
-
+wc -l books/other/pg1232.txt
 
 
 
@@ -259,7 +268,7 @@ Write the command that you used below.  Describe what spacebar and q does after 
 
 Write the command that you used below.
 ----------
-
+cp -r *.txt ~
 
 
 
